@@ -11,4 +11,4 @@ Disallow: /onboarding
 Disallow: /login
 Disallow: /signup
 
-Sitemap: https://dependencyintelligence.dev/sitemap.xml
+Sitemap: https://verspect.akstechies.com/sitemap.xml
