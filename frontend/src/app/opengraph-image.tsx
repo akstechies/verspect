@@ -58,7 +58,7 @@ export default function Image() {
             height: "760px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(32, 180, 166, 0.16) 0%, rgba(32, 180, 166, 0) 68%)",
+              "linear-gradient(135deg, rgba(32, 180, 166, 0.16) 0%, rgba(32, 180, 166, 0) 80%)",
           }}
         />
 
