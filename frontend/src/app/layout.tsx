@@ -2,13 +2,22 @@ import type { Metadata } from "next";
 import { Providers } from "@/components/providers";
 import "./globals.css";
 
+const siteUrl = "https://verspect.akstechies.com";
+const pageTitle = "Verspect";
+const pageDescription =
+  "Scan repositories, simulate breaking changes, and generate exact migration patches. Dependency intelligence for engineering teams.";
+const socialDescription = "Know every upgrade before you ship it.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Verspect",
+    default: pageTitle,
     template: "%s · Verspect",
   },
-  description:
-    "Scan repositories, simulate breaking changes, and generate exact migration patches. Dependency intelligence for engineering teams.",
+  description: pageDescription,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Verspect",
     "Python",
@@ -20,22 +29,27 @@ export const metadata: Metadata = {
     "PHP",
     "Ruby",
     "dependency scanning",
-    "dependency scanning",
     "CVE",
     "upgrade simulator",
     "migration planning",
-    "SaaS",
   ],
   openGraph: {
-    title: "Verspect",
-    description: "Know every upgrade before you ship it.",
+    title: pageTitle,
+    description: socialDescription,
+    url: siteUrl,
     siteName: "Verspect",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Verspect",
-    description: "Know every upgrade before you ship it.",
+    title: pageTitle,
+    description: socialDescription,
+    images: [
+      {
+        url: "/opengraph-image",
+        alt: "Verspect — dependency intelligence for package health, security risk, and upgrade impact.",
+      },
+    ],
   },
   robots: { index: true, follow: true },
 };
